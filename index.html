@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Жасұлан & Ясмин - Құдалық той</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="music-container">
+            <span class="music-text">Музыканы қосу</span>
+            <div class="music-player">
+                <svg id="music-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="toggleMusic()">
+                    <path id="play-icon" d="M8 5V19L19 12L8 5Z" fill="white"/>
+                    <path id="pause-icon" d="M6 19H10V5H6V19ZM14 5V19H18V5H14Z" fill="white" style="display: none;"/>
+                </svg>
+            </div>
+            <audio id="bg-music" loop>
+                <source src="./assets/audio/music.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    
+        <div>
+            <h1>Жасұлан <br> & <br> Ясмин</h1>
+            <div class="hero-date">23.08.2026</div>
+        </div>
+    </div>
+
+<div class="wrapper">
+
+    <section class="section-wrap">
+
+        <p class="cursive-text" style="font-weight: 600;">
+            Құрметті ағайын-туыс, бауырлар, нағашы-жиен, бөлелер, құда-жекжат, дос-жарандар, көршілер!
+        </p>
+
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+
+        <p class="text">Сіздерді балаларымыз</p>
+
+        <p class="cursive-text" style="font-size: 1.8rem; font-weight: 700; margin: 15px 0;">Жасұлан мен Ясминның</p>
+
+        <p class="text">
+            Құдалық тойы - аралас шайына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!
+        </p>
+
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+
+    </section>
+
+    <section class="section-wrap calendar-section">
+        <h2>Той салтанаты:</h2>
+
+        <div class="calendar-full">
+            <div class="cal-header">Тамыздың <b>23</b>-і | Сағат <b>12:00</b>-де</div>
+            <div class="cal-header-no-border">Тамыз</div>
+            <div class="week-days">
+                <span>Дс</span><span>Сс</span><span>Ср</span><span>Бс</span><span>Жм</span><span>Сб</span><span>Жс</span>
+            </div>
+
+            <div class="days">
+                <span class="empty"></span><span class="empty"></span><span class="empty"></span><span class="empty"></span>
+                <span>1</span><span>2</span><span>3</span>
+                <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+                <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+                <span class="active">23</span>
+                <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                <span>31</span>
+            </div>
+        </div>
+
+        
+    </section>
+
+    <section class="section-wrap map-section">
+
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+
+        <h2>Мекенжайымыз:</h2>
+
+        <p class="place">"Ариадна"</p>
+
+        <p class="address">
+            Ақтөбе қаласы,<br>
+            Бөкенбай батыр көшесі, 127
+        </p>
+
+        <a class="map-btn" href="https://2gis.kz/aktobe/geo/70000001032763183/57.196090,50.263258" target="_blank">Картадан ашу</a>
+    </section>
+
+    <section class="section-wrap hosts-section">
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+        <h2>Той иелері:</h2>
+        <p class="text">Әжесі: <br> <span class="cursive-text">Салтанат</span></p>
+        <p class="text">Ата-анасы: <br> <span class="cursive-text">Бекбол & Жанна</span></p>
+    </section>
+
+    <section class="section-wrap rsvp-section">
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+        <h2 style="font-family: 'ventura';">Тойға келесіз бе?</h2>
+        <p class="rsvp-hint" style="font-size: 1.2rem;">Жұбайыңызбен келетін болсаңыз, екеуіңіздің де атыңызды жазуыңызды өтінеміз</p>
+        
+        <form id="tg-form">
+            <input type="text" id="user_name" placeholder="Аты-жөніңіз" required>
+            
+            <select id="attendance_status" required onchange="checkStatus()">
+                <option value="Әрине, келемін">Әрине, келемін</option>
+                <option value="Жұбайыммен келемін">Жұбайыммен келемін</option>
+                <option value="Өкінішке орай, келе алмаймын">Өкінішке орай, келе алмаймын</option>
+            </select>
+
+            <div id="guest-input-group">
+                <p class="rsvp-hint">Қанша адам келесіздер?</p>
+                <input type="number" id="guest_count" min="1" max="2" value="1">
+            </div>
+
+            <button type="submit" class="map-btn" style="width: 100%; border: none;">ЖІБЕРУ</button>
+        </form>
+
+        <br>
+        <br>
+
+        <div class="divider">
+            <img src="./assets/img/divider.png" width="100%" alt="">
+        </div>
+
+    </section>
+
+</div>
+
+<footer class="timer-footer">
+    <h2>Тойға дейін қалған уақыт:</h2>
+    <div id="countdown"></div>
+</footer>
+
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
